@@ -6,6 +6,8 @@
 .project
 .pub/
 build/
+bower_components/
+node_modules/
 **/packages/
 
 # Files created by dart2js

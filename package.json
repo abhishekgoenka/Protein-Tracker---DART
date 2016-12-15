@@ -1,0 +1,30 @@
+{
+  "name": "proteintrackerappdart",
+  "version": "1.0.0",
+  "description": "Protein Tracker Application using DART",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekgoenka/Protein-Tracker-Application-Using-DART.git"
+  },
+  "keywords": [
+    "Protein",
+    "Protein Tracker Application",
+    "DART"
+  ],
+  "author": "Abhishek Goenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhishekgoenka/Protein-Tracker-Application-Using-DART/issues"
+  },
+  "homepage": "https://github.com/abhishekgoenka/Protein-Tracker-Application-Using-DART#readme",
+  "devDependencies": {
+    "dart2js-gulp": "0.0.5",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
