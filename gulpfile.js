@@ -12,4 +12,4 @@ gulp.task('webserver', function() {
 
 
 // The default task (called when you run `gulp` from cli) 
-gulp.task('default',['webserver']);
+gulp.task('dev',['webserver']);
