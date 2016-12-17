@@ -23,7 +23,12 @@ bower update
 
 ## Run Application
 Use the following command to run the project in your default browser
->gulp dev
+
+In Release mode
+>grunt
+
+In debug mode
+>grunt dev
 
 ## License
 MIT license

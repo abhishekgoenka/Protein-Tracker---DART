@@ -10,25 +10,65 @@
     <!-- Latest compiled and minified CSS -->
     <!-- Optional theme -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/web/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
- <div class="container">
-     
+    <div class="container">
 
-      <div class="starter-template">
-        <h1>Protein Tracker Application using DART</h1>
-        <p class="lead">This is a DART example</p>
-      </div>
 
-        <button class="btn-success">Abc</button>
-    </div><!-- /.container -->
+        <div class="starter-template">
+            <h1>Protein Tracker Application using DART</h1>
+            <p class="lead">This is a DART example</p>
+        </div>
+
+        <!-- Add Protein -->
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="enterprotein">Add Protein:</label>
+                    <input type="text" class="form-control" id="enterprotein">
+                </div>
+                <button type="submit" class="btn btn-success">Add</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </form>
+        </div>
+
+        <!-- Show current Protein -->
+        <div class="row">
+
+            <label>Total Protein</label>
+            <span class="badge">150</span> grams
+        </div>
+
+        <!-- Setting - Set GOAL -->
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="goal">Goal:</label>
+                    <input type="text" class="form-control" id="goal">
+                </div>
+                <button type="submit" class="btn btn-success">Set Goal</button>
+            </form>
+        </div>
+
+        <!-- Logs -->
+        <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.container -->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.dart.js"></script>
 </body>
 
 </html>

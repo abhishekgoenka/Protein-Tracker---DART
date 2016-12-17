@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         mkdir: {
             build: {
                 options: {
-                    create: ['build/web']
+                    create: ['build/web/js']
                 }
             }
         },
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                 "dart2js_bin": "C:/tools/dart-sdk/bin/dart2js.bat"
             },
             compile: {
-                files: { 'build/web/main.dart.js': 'web/main.dart' }
+                files: { 'build/web/js/main.dart.js': 'web/dart/main.dart' }
             }
         },
         // 3.
@@ -64,8 +64,10 @@ module.exports = function (grunt) {
         },
         open: {
             dev: {
-                path: 'http://127.0.0.1:8000/web/index.html',
-                //app: 'Google Chrome'
+                path: 'http://127.0.0.1:8000/web/index.html'
+            },
+            release: {
+                path: 'http://127.0.0.1:8000/build/web/index.html'
             },
             build: {
                 path: 'http://google.com/',
@@ -93,9 +95,13 @@ module.exports = function (grunt) {
         'dart2js',
         'copy:build',
         'cleanempty:build',
-        'open:dev',
+        'open:release',
         'web_server',
-        
     ]);
 
+    // debug mode
+    grunt.registerTask('dev', [
+        'open:dev',
+        'web_server',
+    ]);
 };
