@@ -29,6 +29,8 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-dart2js": "0.0.5",
     "grunt-mkdir": "^1.0.0",
+    "grunt-open": "^0.2.3",
+    "grunt-web-server": "^1.2.3",
     "gulp": "^3.9.1",
     "gulp-webserver": "^0.9.1",
     "matchdep": "^1.0.1"

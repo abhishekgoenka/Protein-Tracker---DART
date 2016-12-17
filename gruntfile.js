@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
-       // 1.
+        // 1.
         // create build web directory
         mkdir: {
             build: {
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                 "dart2js_bin": "C:/tools/dart-sdk/bin/dart2js.bat"
             },
             compile: {
-                files: {'build/web/main.dart.js': 'web/main.dart'}
+                files: { 'build/web/main.dart.js': 'web/main.dart' }
             }
         },
         // 3.
@@ -53,6 +53,33 @@ module.exports = function (grunt) {
                 src: ['build/web/packages/**/*']
             }
         },
+        web_server: {
+            options: {
+                cors: true,
+                port: 8000,
+                nevercache: true,
+                logRequests: true
+            },
+            foo: 'bar' // For some reason an extra key with a non-object value is necessary 
+        },
+        open: {
+            dev: {
+                path: 'http://127.0.0.1:8000/index.html',
+                //app: 'Google Chrome'
+            },
+            build: {
+                path: 'http://google.com/',
+                app: 'Firefox'
+            },
+            file: {
+                path: '/etc/hosts'
+            },
+            custom: {
+                path: function () {
+                    return grunt.option('path');
+                }
+            }
+        }
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -69,7 +96,10 @@ module.exports = function (grunt) {
         'mkdir:build',
         'dart2js',
         'copy:build',
-        'cleanempty:build'
+        'cleanempty:build',
+        'open:dev',
+        'web_server',
+        
     ]);
 
 };
