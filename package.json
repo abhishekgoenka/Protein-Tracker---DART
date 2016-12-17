@@ -23,10 +23,14 @@
   "homepage": "https://github.com/abhishekgoenka/Protein-Tracker-Application-Using-DART#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
+    "grunt-cleanempty": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-dart2js": "0.0.5",
+    "grunt-mkdir": "^1.0.0",
     "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "matchdep": "^1.0.1"
   }
 }
