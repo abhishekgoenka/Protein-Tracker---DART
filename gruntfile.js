@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         },
         open: {
             dev: {
-                path: 'http://127.0.0.1:8000/index.html',
+                path: 'http://127.0.0.1:8000/web/index.html',
                 //app: 'Google Chrome'
             },
             build: {
@@ -82,12 +82,8 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
-    // Use the dart2js tool to compile Dart code to JavaScript
-    //https://webdev.dartlang.org/tools/dart2js
-    // Load the plugin that will compile Dart code to JavaScript
+    //Without matchdep, we would have to write grunt.loadNpmTasks("grunt-task-name"); 
+    //for each dependency, which would quickly add up as we find and install other plugins.
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 
