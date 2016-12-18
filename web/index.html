@@ -19,8 +19,8 @@
 
 
         <div class="starter-template">
-            <h1>Protein Tracker Application using DART</h1>
-            <p class="lead">This is a DART example</p>
+            <h1>Protein Tracker Application</h1>
+            <p class="lead">This application is developed using DART language</p>
         </div>
 
         <!-- Add Protein -->
@@ -30,8 +30,8 @@
                     <label for="enterprotein">Add Protein:</label>
                     <input type="text" class="form-control" id="enterprotein">
                 </div>
-                <button type="submit" class="btn btn-success">Add</button>
-                <button type="reset" class="btn btn-default">Reset</button>
+                <button type="button" class="btn btn-success" id="btnAdd">Add</button>
+                <button type="button" class="btn btn-default">Reset</button>
             </form>
         </div>
 
@@ -39,7 +39,8 @@
         <div class="row">
 
             <label>Total Protein</label>
-            <span class="badge">150</span> grams
+            <div class="badge" id="totalProtein">150</div> grams 
+            <!-- <div id="totalProtein" class="badge">test</div> -->
         </div>
 
         <!-- Setting - Set GOAL -->

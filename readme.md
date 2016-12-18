@@ -27,8 +27,8 @@ Use the following command to run the project in your default browser
 In Release mode
 >grunt
 
-In debug mode
->grunt dev
+Use this command to compile DART file to JavaScript
+>grunt compiledart
 
 ## License
 MIT license

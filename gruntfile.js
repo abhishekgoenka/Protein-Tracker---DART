@@ -100,8 +100,8 @@ module.exports = function (grunt) {
     ]);
 
     // debug mode
-    grunt.registerTask('dev', [
-        'open:dev',
-        'web_server',
+    grunt.registerTask('compiledart', [
+        'mkdir:build',
+        'dart2js',
     ]);
 };
