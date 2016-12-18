@@ -24,15 +24,41 @@ void initDefaultData(){
 } 
 
 void initDefaultEvents(){
-    //hook add button click
-    querySelector("#btnAdd").onClick.listen(addAmount);
+    
+    //hook button click events
+    querySelector("#btnAdd").onClick.listen(btnAdd_Click);
+    querySelector("#btnReset").onClick.listen(btnReset_Click);
 }
 
 //Add button click event callback
-void addAmount(Event e){
-    var amount = enteredprot.value;
-    total += int.parse(amount);
+void btnAdd_Click(Event e){
+    var protein = int.parse(enteredprot.value, onError: (source) => 0);
+    if(protein > 0){
+        total += protein;
 
-    //update total
+        //update total
+        totalProtein.text = "$total";
+
+        var history = querySelector("#history");
+        var newhistory = new LIElement();
+        newhistory.text = "$protein protein added. Total protein is $total";
+        newhistory.attributes['class'] = "list-group-item list-group-item-info";
+        history.children.add(newhistory);
+    }
+}
+
+//Reset button click event callback
+void btnReset_Click(Event e){
+    total = 0;
+
+    //Reset values
+    enteredprot.value = "0";
     totalProtein.text = "$total";
+
+     var history = querySelector("#history");
+     history.children.clear();
+}
+
+int intParseError(string value){
+    return 0;
 }

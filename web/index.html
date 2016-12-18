@@ -31,7 +31,7 @@
                     <input type="text" class="form-control" id="enterprotein">
                 </div>
                 <button type="button" class="btn btn-success" id="btnAdd">Add</button>
-                <button type="button" class="btn btn-default">Reset</button>
+                <button type="button" class="btn btn-default" id="btnReset">Reset</button>
             </form>
         </div>
 
@@ -39,7 +39,7 @@
         <div class="row">
 
             <label>Total Protein</label>
-            <div class="badge" id="totalProtein">150</div> grams 
+            <div class="badge" id="totalProtein">150</div> grams
             <!-- <div id="totalProtein" class="badge">test</div> -->
         </div>
 
@@ -56,11 +56,8 @@
 
         <!-- Logs -->
         <div class="row">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-                <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-                <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-                <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+            <ul class="list-group" id="history">
+
             </ul>
         </div>
     </div>
@@ -69,6 +66,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- This file is generated automatically during build process -->
     <script src="js/main.dart.js"></script>
 </body>
 
